@@ -29,6 +29,7 @@ public class HelloWorldController {
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public ModelAndView sayWelcome(
 			@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
+		System.out.println("This is my testing");
 		ModelAndView model = new ModelAndView("hello");		
 		List<Employee> employeeList = new ArrayList<Employee>();
 		employeeList = employeeService.findAllEmployees();
